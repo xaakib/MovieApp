@@ -84,10 +84,11 @@ class DeshboardScreen extends StatelessWidget {
                             fontSize: 15, backgroundColor: Colors.orangeAccent),
                       ),
                       onPressed: () {
-                         Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => VerticalView()),
-                      );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VerticalView()),
+                        );
                       }),
                 ],
               ),
@@ -122,10 +123,11 @@ class DeshboardScreen extends StatelessWidget {
                             fontSize: 15, backgroundColor: Colors.orangeAccent),
                       ),
                       onPressed: () {
-                         Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => VerticalView()),
-                      );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => VerticalView()),
+                        );
                       }),
                 ],
               ),
