@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:progress_state_button/iconed_button.dart';
-import 'package:progress_state_button/progress_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
@@ -19,6 +17,8 @@ class MovieDetailsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.teal,
+        elevation: 0,
         title: Stack(
           children: <Widget>[
             Container(width: double.infinity, color: Colors.black),
@@ -83,20 +83,23 @@ class MovieDetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: const EdgeInsets.all(1.0),
-              child: Container(
-                child: Text(
-                  'Screenshots',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                child: Container(
+                  child: Text(
+                    'Screenshots',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
-            ),
             SizedBox(
-              height: 10,
+              height: 2,
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
@@ -130,30 +133,17 @@ class MovieDetailsScreen extends StatelessWidget {
               ),
             ),
             Center(
-              child: ProgressButton.icon(
-                  iconedButtons: {
-                    ButtonState.idle: IconedButton(
-                        text: "Downlaod",
-                        icon: Icon(Icons.cloud_download, color: Colors.white),
-                        color: Colors.deepPurple.shade500),
-                    ButtonState.loading: IconedButton(
-                        text: "Loading", color: Colors.deepPurple.shade700),
-                    ButtonState.fail: IconedButton(
-                        text: "Failed",
-                        icon: Icon(Icons.cancel, color: Colors.white),
-                        color: Colors.red.shade300),
-                    ButtonState.success: IconedButton(
-                        text: "Success",
-                        icon: Icon(
-                          Icons.check_circle,
-                          color: Colors.white,
-                        ),
-                        color: Colors.green.shade400)
-                  },
-                  onPressed: () {
-                    _launchURL(movielink);
-                  },
-                  state: ButtonState.idle),
+              child: IconButton(
+                icon: Icon(
+                  Icons.cloud_download,
+                ),
+                iconSize: 70,
+                color: Colors.green,
+                splashColor: Colors.pink,
+                onPressed: () {
+                  _launchURL(movielink);
+                },
+              ),
             ),
           ],
         ),
