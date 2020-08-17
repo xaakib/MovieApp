@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:progress_state_button/iconed_button.dart';
+import 'package:progress_state_button/progress_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MovieDetailsScreen extends StatelessWidget {
   static const routeName = '/movie-details';
+
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -92,54 +95,34 @@ class MovieDetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 10.0),
-              height: 200.0,
-              child: Card(
-                elevation: 8,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 500,
+                width: 370,
+                child: Column(
+                  children: [
                     Padding(
-                      padding: const EdgeInsets.all(3.0),
+                      padding: const EdgeInsets.all(4.0),
                       child: Container(
-                        height: 150,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(imagescreen),
-                          ),
+                        child: Image.network(
+                          imagescreen,
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Container(
-                        height: 150,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(imagescreen1),
-                          ),
-                        ),
+                    Container(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Image.network(
+                        imagescreen1,
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(3.0),
-                      child: Container(
-                        height: 150,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(3),
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: NetworkImage(imagescreen2),
-                          ),
-                        ),
+                    Container(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Image.network(
+                        imagescreen2,
                       ),
                     ),
                   ],
@@ -147,12 +130,30 @@ class MovieDetailsScreen extends StatelessWidget {
               ),
             ),
             Center(
-              child: RaisedButton(
-                onPressed: () {
-                  launch(movielink);
-                },
-                child: Text('Downlaod '),
-              ),
+              child: ProgressButton.icon(
+                  iconedButtons: {
+                    ButtonState.idle: IconedButton(
+                        text: "Downlaod",
+                        icon: Icon(Icons.cloud_download, color: Colors.white),
+                        color: Colors.deepPurple.shade500),
+                    ButtonState.loading: IconedButton(
+                        text: "Loading", color: Colors.deepPurple.shade700),
+                    ButtonState.fail: IconedButton(
+                        text: "Failed",
+                        icon: Icon(Icons.cancel, color: Colors.white),
+                        color: Colors.red.shade300),
+                    ButtonState.success: IconedButton(
+                        text: "Success",
+                        icon: Icon(
+                          Icons.check_circle,
+                          color: Colors.white,
+                        ),
+                        color: Colors.green.shade400)
+                  },
+                  onPressed: () {
+                    _launchURL(movielink);
+                  },
+                  state: ButtonState.idle),
             ),
           ],
         ),
@@ -161,20 +162,11 @@ class MovieDetailsScreen extends StatelessWidget {
   }
 }
 
-// _launchURL(movielink) async {
-//   final url = movielink;
-//   if (await canLaunch(url)) {
-//     await launch(url);
-//   } else {
-//     throw 'Could not launch $url';
-//   }
-// }
-
-// _launchURL(movielink) async {
-//   final url = movielink;
-//   if (await canLaunch(url)) {
-//     await launch(url);
-//   } else {
-//     throw 'Could not launch $url';
-//   }
-// }
+_launchURL(movielink) async {
+  final url = movielink;
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
