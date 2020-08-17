@@ -169,3 +169,12 @@ class MovieDetailsScreen extends StatelessWidget {
 //     throw 'Could not launch $url';
 //   }
 // }
+
+// _launchURL(movielink) async {
+//   final url = movielink;
+//   if (await canLaunch(url)) {
+//     await launch(url);
+//   } else {
+//     throw 'Could not launch $url';
+//   }
+// }
