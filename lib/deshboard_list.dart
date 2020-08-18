@@ -67,7 +67,7 @@ class DeshboardScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 2,
+              height: 3,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
