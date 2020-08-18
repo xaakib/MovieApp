@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/moviescreen.dart';
-import 'package:newapp/string.dart';
+import 'package:newapp/downlod_screeen.dart';
+import 'package:newapp/data.dart';
 
 class BollyWoodList extends StatelessWidget {
   final int index;

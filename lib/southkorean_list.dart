@@ -1,11 +1,13 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/moviescreen.dart';
-import 'package:newapp/string.dart';
+import 'package:newapp/downlod_screeen.dart';
+import 'package:newapp/data.dart';
 
-class BanglaMovie extends StatelessWidget {
+class SouthKoreanList extends StatelessWidget {
   final int index;
-  BanglaMovie(this.index);
+  SouthKoreanList(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +19,14 @@ class BanglaMovie extends StatelessWidget {
           Navigator.of(context).pushNamed(
             MovieDetailsScreen.routeName,
             arguments: {
-              'id': bangLa[index].id,
-              'title': bangLa[index].title,
-              'imageurl': bangLa[index].imageurl,
-              'imagescreen': bangLa[index].imagescreen,
-              'imagescreen1': bangLa[index].imagescreen1,
-              'imagescreen2': bangLa[index].imagescreen2,
-              'description': bangLa[index].description,
-              'movielink': bangLa[index].movielink,
+              'id': southkorean[index].id,
+              'title': southkorean[index].title,
+              'imageurl': southkorean[index].imageurl,
+              'imagescreen': southkorean[index].imagescreen,
+              'imagescreen1': southkorean[index].imagescreen1,
+              'imagescreen2': southkorean[index].imagescreen2,
+              'description': southkorean[index].description,
+              'movielink': southkorean[index].movielink,
             },
           );
         },
@@ -38,7 +40,7 @@ class BanglaMovie extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(bangLa[index].imageurl),
+                    image: NetworkImage(southkorean[index].imageurl),
                   ),
                 ),
               ),
@@ -47,7 +49,7 @@ class BanglaMovie extends StatelessWidget {
               height: 10,
             ),
             Text(
-              bangLa[index].title,
+              southkorean[index].title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -56,4 +58,4 @@ class BanglaMovie extends StatelessWidget {
       ),
     );
   }
-}
+} 

@@ -1,13 +1,11 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/moviescreen.dart';
-import 'package:newapp/string.dart';
+import 'package:newapp/downlod_screeen.dart';
+import 'package:newapp/data.dart';
 
-class SouthKoreanList extends StatelessWidget {
+class BanglaMovie extends StatelessWidget {
   final int index;
-  SouthKoreanList(this.index);
+  BanglaMovie(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +17,14 @@ class SouthKoreanList extends StatelessWidget {
           Navigator.of(context).pushNamed(
             MovieDetailsScreen.routeName,
             arguments: {
-              'id': southkorean[index].id,
-              'title': southkorean[index].title,
-              'imageurl': southkorean[index].imageurl,
-              'imagescreen': southkorean[index].imagescreen,
-              'imagescreen1': southkorean[index].imagescreen1,
-              'imagescreen2': southkorean[index].imagescreen2,
-              'description': southkorean[index].description,
-              'movielink': southkorean[index].movielink,
+              'id': bangLa[index].id,
+              'title': bangLa[index].title,
+              'imageurl': bangLa[index].imageurl,
+              'imagescreen': bangLa[index].imagescreen,
+              'imagescreen1': bangLa[index].imagescreen1,
+              'imagescreen2': bangLa[index].imagescreen2,
+              'description': bangLa[index].description,
+              'movielink': bangLa[index].movielink,
             },
           );
         },
@@ -40,7 +38,7 @@ class SouthKoreanList extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(southkorean[index].imageurl),
+                    image: NetworkImage(bangLa[index].imageurl),
                   ),
                 ),
               ),
@@ -49,7 +47,7 @@ class SouthKoreanList extends StatelessWidget {
               height: 10,
             ),
             Text(
-              southkorean[index].title,
+              bangLa[index].title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -58,4 +56,4 @@ class SouthKoreanList extends StatelessWidget {
       ),
     );
   }
-} 
+}

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/bangla.dart';
-import 'package:newapp/bollyword.dart';
-import 'package:newapp/southkorean.dart';
-import 'package:newapp/string.dart';
-import 'package:newapp/vertical.dart';
+import 'package:newapp/bangla_list.dart';
+import 'package:newapp/bangla_see.dart';
+import 'package:newapp/bollywood_list.dart';
+import 'package:newapp/southkorean_list.dart';
+import 'package:newapp/data.dart';
+import 'package:newapp/southkorean_see.dart';
 
 class DeshboardScreen extends StatelessWidget {
   @override
@@ -47,7 +48,7 @@ class DeshboardScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => VerticalView()),
+                        MaterialPageRoute(builder: (context) => SouthkoreanSee()),
                       );
                     },
                   ),
@@ -87,7 +88,7 @@ class DeshboardScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => VerticalView()),
+                              builder: (context) => SouthkoreanSee()),
                         );
                       }),
                 ],
@@ -126,7 +127,7 @@ class DeshboardScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => VerticalView()),
+                              builder: (context) => BanglaSee()),
                         );
                       }),
                 ],
