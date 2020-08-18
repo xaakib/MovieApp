@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/downlod_screeen.dart';
-import 'package:newapp/data.dart';
+import 'package:newapp/screens/downlod_screeen.dart';
+import 'package:newapp/screens/Data/data.dart';
 
 class BanglaMovie extends StatelessWidget {
   final int index;

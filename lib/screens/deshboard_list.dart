@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/bangla_list.dart';
-import 'package:newapp/bangla_see.dart';
-import 'package:newapp/bollywood_list.dart';
-import 'package:newapp/southkorean_list.dart';
-import 'package:newapp/data.dart';
-import 'package:newapp/southkorean_see.dart';
+import 'package:newapp/screens/bangla_list.dart';
+import 'package:newapp/screens/bangla_see.dart';
+import 'package:newapp/screens/bollywood_list.dart';
+import 'package:newapp/screens/southkorean_list.dart';
+import 'package:newapp/screens/Data/data.dart';
+import 'package:newapp/screens/southkorean_see.dart';
 
 class DeshboardScreen extends StatelessWidget {
   @override

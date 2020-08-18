@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:newapp/downlod_screeen.dart';
-import 'package:newapp/deshboard_list.dart';
+import 'package:newapp/screens/downlod_screeen.dart';
+import 'package:newapp/screens/deshboard_list.dart';
 
 void main() => runApp(MyApp());
 

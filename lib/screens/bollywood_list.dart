@@ -1,13 +1,11 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/downlod_screeen.dart';
-import 'package:newapp/data.dart';
+import 'package:newapp/screens/downlod_screeen.dart';
+import 'package:newapp/screens/Data/data.dart';
 
-class SouthKoreanList extends StatelessWidget {
+class BollyWoodList extends StatelessWidget {
   final int index;
-  SouthKoreanList(this.index);
+  BollyWoodList(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -19,14 +17,14 @@ class SouthKoreanList extends StatelessWidget {
           Navigator.of(context).pushNamed(
             MovieDetailsScreen.routeName,
             arguments: {
-              'id': southkorean[index].id,
-              'title': southkorean[index].title,
-              'imageurl': southkorean[index].imageurl,
-              'imagescreen': southkorean[index].imagescreen,
-              'imagescreen1': southkorean[index].imagescreen1,
-              'imagescreen2': southkorean[index].imagescreen2,
-              'description': southkorean[index].description,
-              'movielink': southkorean[index].movielink,
+              'id': bollywood[index].id,
+              'title': bollywood[index].title,
+              'imageurl': bollywood[index].imageurl,
+              'imagescreen': bollywood[index].imagescreen,
+              'imagescreen1': bollywood[index].imagescreen1,
+              'imagescreen2': bollywood[index].imagescreen2,
+              'description': bollywood[index].description,
+              'movielink': bollywood[index].movielink,
             },
           );
         },
@@ -40,7 +38,7 @@ class SouthKoreanList extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(southkorean[index].imageurl),
+                    image: NetworkImage(bollywood[index].imageurl),
                   ),
                 ),
               ),
@@ -49,7 +47,7 @@ class SouthKoreanList extends StatelessWidget {
               height: 10,
             ),
             Text(
-              southkorean[index].title,
+              bollywood[index].title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -58,4 +56,4 @@ class SouthKoreanList extends StatelessWidget {
       ),
     );
   }
-} 
+}

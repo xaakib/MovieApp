@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/bangla_list.dart';
-import 'package:newapp/data.dart';
+import 'package:newapp/screens/bangla_list.dart';
+import 'package:newapp/screens/Data/data.dart';
 
 class BanglaSee extends StatelessWidget {
   @override
