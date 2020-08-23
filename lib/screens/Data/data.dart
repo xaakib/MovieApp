@@ -1,4 +1,3 @@
-
 class Movie {
   final String id;
   final String title;
@@ -32,7 +31,8 @@ List<Movie> southkorean = [
     imagescreen2: 'https://imgmak.com/images/2020/07/18/1.png',
     description:
         'A 6-year old girl is kidnapped by a mysterious masked man, who demands an unusual ransom. To save his daughter, Dr. Avinash Sabharwal must kill someone! Meanwhile, Kabir Sawant’s journey continues in the hostile environment of the Delhi Crime branch. Lies, deceit and mind games begin when Kabir is given charge of the investigation, and meets Avinash .',
-    movielink: 'https://image.tmdb.org/t/p/w185/7S9RvfMBWSTlUZ4VbxDY7oLeenk.jpg',
+    movielink:
+        'https://image.tmdb.org/t/p/w185/7S9RvfMBWSTlUZ4VbxDY7oLeenk.jpg',
   ),
   Movie(
     id: 'tt1',
@@ -47,7 +47,8 @@ List<Movie> southkorean = [
         'https://extraimage.com/images/2020/07/16/vlcsnap-2020-07-16-10h42m43s103.md.png',
     description:
         'A 6-year old girl is kidnapped by a mysterious masked man, who demands an unusual ransom. To save his daughter, Dr. Avinash Sabharwal must kill someone! Meanwhile, Kabir Sawant’s journey continues in the hostile environment of the Delhi Crime branch. Lies, deceit and mind games begin when Kabir is given charge of the investigation, and meets Avinash .',
-    movielink: 'https://images.pexels.com/photos/2388361/pexels-photo-2388361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+    movielink:
+        'https://images.pexels.com/photos/2388361/pexels-photo-2388361.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   ),
 
   Movie(
@@ -111,7 +112,8 @@ final bollywood = [
         'https://extraimage.com/images/2020/07/16/vlcsnap-2020-07-16-10h42m43s103.md.png',
     description:
         'A 6-year old girl is kidnapped by a mysterious masked man, who demands an unusual ransom. To save his daughter, Dr. Avinash Sabharwal must kill someone! Meanwhile, Kabir Sawant’s journey continues in the hostile environment of the Delhi Crime branch. Lies, deceit and mind games begin when Kabir is given charge of the investigation, and meets Avinash .',
-    movielink: 'https://image.tmdb.org/t/p/w185/x0JMjsGBIryLGJEDxGGN9gxhixe.jpg',
+    movielink:
+        'https://image.tmdb.org/t/p/w185/x0JMjsGBIryLGJEDxGGN9gxhixe.jpg',
   ),
 
   Movie(
@@ -241,7 +243,8 @@ final bangLa = [
         'https://extraimage.com/images/2020/07/16/vlcsnap-2020-07-16-10h42m43s103.md.png',
     description:
         'A 6-year old girl is kidnapped by a mysterious masked man, who demands an unusual ransom. To save his daughter, Dr. Avinash Sabharwal must kill someone! Meanwhile, Kabir Sawant’s journey continues in the hostile environment of the Delhi Crime branch. Lies, deceit and mind games begin when Kabir is given charge of the investigation, and meets Avinash .',
-    movielink: 'https://image.tmdb.org/t/p/w185/cF74NMos71AvUgEVlmyJrTzpuRB.jpg',
+    movielink:
+        'https://image.tmdb.org/t/p/w185/cF74NMos71AvUgEVlmyJrTzpuRB.jpg',
   ),
   Movie(
     id: 'tt1',

@@ -48,7 +48,8 @@ class DeshboardScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SouthkoreanSee()),
+                        MaterialPageRoute(
+                            builder: (context) => SouthkoreanSee()),
                       );
                     },
                   ),
@@ -126,8 +127,7 @@ class DeshboardScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => BanglaSee()),
+                          MaterialPageRoute(builder: (context) => BanglaSee()),
                         );
                       }),
                 ],
@@ -173,7 +173,7 @@ class DeshboardScreen extends StatelessWidget {
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: southkorean.length,
-                  itemBuilder: (ctx, i) => BanglaMovie(i),
+           chan       itemBuilder: (ctx, i) => BanglaMovie(i),
                 ),
               ),
             ),
