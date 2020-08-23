@@ -4,6 +4,7 @@ import 'package:newapp/screens/southkorean_list.dart';
 import 'package:newapp/screens/Data/data.dart';
 
 class SouthkoreanSee extends StatelessWidget {
+  final 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
