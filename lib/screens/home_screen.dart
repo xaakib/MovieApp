@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/screens/details_screen_colum.dart';
+import 'package:newapp/screens/home_colum.dart';
 
-class MovieDetailsScreen extends StatelessWidget {
+class DeshboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,22 +10,22 @@ class MovieDetailsScreen extends StatelessWidget {
         slivers: [
           SliverAppBar(
             brightness: Brightness.light,
-            backgroundColor: Colors.blueGrey,
+            backgroundColor: Colors.white,
             title: Text(
-              'Movie Details',
+              'Movies House',
               style: const TextStyle(
-                color: Colors.white,
+                color: Colors.red,
                 fontSize: 28.0,
                 fontWeight: FontWeight.bold,
                 letterSpacing: -1.2,
               ),
             ),
-            centerTitle: true,
+            centerTitle: false,
             floating: true,
             actions: [],
           ),
           SliverToBoxAdapter(
-            child: DetailsScreenColum(),
+            child: ColumWidgets(),
           ),
         ],
       ),

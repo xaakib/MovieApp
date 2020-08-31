@@ -1,11 +1,13 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/screens/downlod_screeen.dart';
+import 'package:newapp/screens/details_screen_colum.dart';
 import 'package:newapp/screens/Data/data.dart';
 
-class BanglaMovie extends StatelessWidget {
+class UltraHD2160p extends StatelessWidget {
   final int index;
-  BanglaMovie(this.index);
+  UltraHD2160p(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +17,16 @@ class BanglaMovie extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushNamed(
-            MovieDetailsScreen.routeName,
+            DetailsScreenColum.routeName,
             arguments: {
-              'id': bangLa[index].id,
-              'title': bangLa[index].title,
-              'imageurl': bangLa[index].imageurl,
-              'imagescreen': bangLa[index].imagescreen,
-              'imagescreen1': bangLa[index].imagescreen1,
-              'imagescreen2': bangLa[index].imagescreen2,
-              'description': bangLa[index].description,
-              'movielink': bangLa[index].movielink,
+              'id': ultrahd2160p[index].id,
+              'title': ultrahd2160p[index].title,
+              'imageurl': ultrahd2160p[index].imageurl,
+              'imagescreen': ultrahd2160p[index].imagescreen,
+              'imagescreen1': ultrahd2160p[index].imagescreen1,
+              'imagescreen2': ultrahd2160p[index].imagescreen2,
+              'description': ultrahd2160p[index].description,
+              'movielink': ultrahd2160p[index].movielink,
             },
           );
         },
@@ -38,7 +40,7 @@ class BanglaMovie extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(bangLa[index].imageurl),
+                    image: NetworkImage(ultrahd2160p[index].imageurl),
                   ),
                 ),
               ),
@@ -47,7 +49,7 @@ class BanglaMovie extends StatelessWidget {
               height: 10,
             ),
             Text(
-              bangLa[index].title,
+              ultrahd2160p[index].title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -56,4 +58,4 @@ class BanglaMovie extends StatelessWidget {
       ),
     );
   }
-}
+} 

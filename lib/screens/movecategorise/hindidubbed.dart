@@ -1,13 +1,11 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/screens/downlod_screeen.dart';
+import 'package:newapp/screens/details_screen_colum.dart';
 import 'package:newapp/screens/Data/data.dart';
 
-class SouthKoreanList extends StatelessWidget {
+class HindiDubbed extends StatelessWidget {
   final int index;
-  SouthKoreanList(this.index);
+  HindiDubbed(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +15,16 @@ class SouthKoreanList extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushNamed(
-            MovieDetailsScreen.routeName,
+            DetailsScreenColum.routeName,
             arguments: {
-              'id': southkorean[index].id,
-              'title': southkorean[index].title,
-              'imageurl': southkorean[index].imageurl,
-              'imagescreen': southkorean[index].imagescreen,
-              'imagescreen1': southkorean[index].imagescreen1,
-              'imagescreen2': southkorean[index].imagescreen2,
-              'description': southkorean[index].description,
-              'movielink': southkorean[index].movielink,
+              'id': hindidubbed[index].id,
+              'title': hindidubbed[index].title,
+              'imageurl': hindidubbed[index].imageurl,
+              'imagescreen': hindidubbed[index].imagescreen,
+              'imagescreen1': hindidubbed[index].imagescreen1,
+              'imagescreen2': hindidubbed[index].imagescreen2,
+              'description': hindidubbed[index].description,
+              'movielink': hindidubbed[index].movielink,
             },
           );
         },
@@ -40,7 +38,7 @@ class SouthKoreanList extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(southkorean[index].imageurl),
+                    image: NetworkImage(hindidubbed[index].imageurl),
                   ),
                 ),
               ),
@@ -49,7 +47,7 @@ class SouthKoreanList extends StatelessWidget {
               height: 10,
             ),
             Text(
-              southkorean[index].title,
+              hindidubbed[index].title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
@@ -58,4 +56,4 @@ class SouthKoreanList extends StatelessWidget {
       ),
     );
   }
-} 
+}

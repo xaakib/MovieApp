@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/screens/details_screen_colum.dart';
 import 'package:newapp/screens/downlod_screeen.dart';
-import 'package:newapp/screens/deshboard_list.dart';
+import 'package:newapp/screens/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: DeshboardScreen(),
       routes: {
-        MovieDetailsScreen.routeName: (ctx) => MovieDetailsScreen(),
+        DetailsScreenColum.routeName: (ctx) => MovieDetailsScreen(),
       },
     );
   }

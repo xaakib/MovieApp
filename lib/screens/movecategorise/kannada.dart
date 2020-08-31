@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:newapp/screens/downlod_screeen.dart';
+import 'package:newapp/screens/details_screen_colum.dart';
 import 'package:newapp/screens/Data/data.dart';
 
-class BollyWoodList extends StatelessWidget {
+class Kannada extends StatelessWidget {
   final int index;
-  BollyWoodList(this.index);
+  Kannada(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +15,16 @@ class BollyWoodList extends StatelessWidget {
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).pushNamed(
-            MovieDetailsScreen.routeName,
+            DetailsScreenColum.routeName,
             arguments: {
-              'id': bollywood[index].id,
-              'title': bollywood[index].title,
-              'imageurl': bollywood[index].imageurl,
-              'imagescreen': bollywood[index].imagescreen,
-              'imagescreen1': bollywood[index].imagescreen1,
-              'imagescreen2': bollywood[index].imagescreen2,
-              'description': bollywood[index].description,
-              'movielink': bollywood[index].movielink,
+              'id': kannda[index].id,
+              'title': kannda[index].title,
+              'imageurl': kannda[index].imageurl,
+              'imagescreen': kannda[index].imagescreen,
+              'imagescreen1': kannda[index].imagescreen1,
+              'imagescreen2': kannda[index].imagescreen2,
+              'description': kannda[index].description,
+              'movielink': kannda[index].movielink,
             },
           );
         },
@@ -38,7 +38,7 @@ class BollyWoodList extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(bollywood[index].imageurl),
+                    image: NetworkImage(kannda[index].imageurl),
                   ),
                 ),
               ),
@@ -47,7 +47,7 @@ class BollyWoodList extends StatelessWidget {
               height: 10,
             ),
             Text(
-              bollywood[index].title,
+              kannda[index].title,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
